@@ -12,21 +12,28 @@ body {
   margin-right: 20px;
   object-fit: contain;
 }
+.seite {
+  text-align: center;
+  background: repeating-linear-gradient(pink violet);
+}
 
 .navbar {
   background-color: #333;
   padding: 10px 0;
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 0;
-  margin: 0;
+  padding: 0 2rem 0 1rem;
 }
 
-.navbar ul li {
-  display: inline;
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+.navbar i {
+  color: #d17bbf;
 }
 
 .navbar a {
@@ -42,7 +49,7 @@ body {
 .welcome {
   text-align: center;
   padding: 20px;
-  background-color: #e772cacc;
+  background-color: #cf63b44d;
   margin-bottom: 20px;
 }
 
@@ -83,22 +90,33 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.product img {
-  max-width: 100%;
+.product img,
+.projekt video {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
   border-radius: 8px;
 }
 
 .product button {
-  background-color: #28a745;
+  background-color: #f875e2d5;
+  height: 2.7rem;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 13px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 
+.basket-button {
+  padding: 0;
+}
+.basket-button i {
+  font-size: 1rem;
+}
+
 .product button:hover {
-  background-color: #218838;
+  background-color: #921a7e;
 }
 
 .Links {
@@ -111,16 +129,38 @@ body {
   margin-bottom: 10px;
 }
 
-.Links ul {
+.link {
+  display: block;
+  margin: 2rem auto;
+  width: 15rem;
+  height: 4rem;
+  background-color: #d17bbe77;
+  color: #160d14;
+
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Links div {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 20px;
 }
+.links p {
+  animation: social-slider 5s infinite;
+}
 
-.Links li {
-  display: inline-block;
+@keyframes social-slider {
+  0% {
+    translate: -100px;
+  }
+  100% {
+    translate: 100px;
+  }
 }
 
 .Links a {
@@ -139,6 +179,8 @@ body {
 
 .Links i {
   font-size: 1.5rem;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 .about {
   background-color: #f9f9f9;
@@ -194,20 +236,9 @@ body {
 .footer a:hover {
   text-decoration: underline;
 }
-a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-}
 
-i {
-  font-size: 1.5rem;
-  animation: pulse 2s infinite;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
+.social-slider {
+  background-color: pink;
 }
 
 a:hover {
